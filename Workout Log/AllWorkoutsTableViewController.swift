@@ -14,6 +14,8 @@ class AllWorkoutsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        workouts[0].addWorkoutDay(day: WorkoutDay(name: "Push", day: "Monday"))
+        workouts[0].addWorkoutDay(day: WorkoutDay(name: "Pull", day: "Tuesday"))
     }
 
     // MARK: - Table view data source

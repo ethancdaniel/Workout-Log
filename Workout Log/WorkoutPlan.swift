@@ -10,10 +10,14 @@ import Foundation
 
 class WorkoutPlan {
     let name: String
-    let workoutDays: [WorkoutDay]
+    var workoutDays: [WorkoutDay]
     
     init(name: String) {
         self.name = name
         self.workoutDays = []
+    }
+    
+    func addWorkoutDay(day: WorkoutDay) {
+        workoutDays.append(day)
     }
 }

@@ -16,6 +16,9 @@ class WorkoutPlanViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        workoutNameLabel.text = selectedWorkout?.name
+        workoutPlanTableView.delegate = self
+        workoutPlanTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
 
@@ -34,11 +37,16 @@ class WorkoutPlanViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let workout = selectedWorkout {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "workoutDay", for: indexPath) as! WorkoutDayTableViewCell
+        let cell = Bundle.main.loadNibNamed("WorkoutDayTableViewCell", owner: self, options: nil)?.first as! WorkoutDayTableViewCell
             cell.nameLabel.text = workout.workoutDays[indexPath.row].workoutName
+            cell.dayLabel.text = workout.workoutDays[indexPath.row].dayName
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
     }
 }
 
