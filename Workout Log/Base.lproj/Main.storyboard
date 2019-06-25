@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-1331" y="105"/>
         </scene>
-        <!--All Workouts Table View Controller-->
+        <!--Select Workout-->
         <scene sceneID="bx1-eu-ama">
             <objects>
                 <tableViewController id="vrf-TC-M2r" customClass="AllWorkoutsTableViewController" customModule="Workout_Log" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,11 +35,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutPlan" id="kxL-q8-edG" customClass="WorkoutPlanTableViewCell" customModule="Workout_Log" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="workoutPlan" id="kxL-q8-edG" customClass="WorkoutPlanTableViewCell" customModule="Workout_Log" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kxL-q8-edG" id="baL-2s-f3X">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odj-tB-Wnn">
@@ -61,7 +61,7 @@
                             <outlet property="delegate" destination="vrf-TC-M2r" id="Mfe-cs-BVh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="RT2-V1-ZHz"/>
+                    <navigationItem key="navigationItem" title="Select Workout" id="RT2-V1-ZHz"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="selectWorkout" id="cVX-T6-8ev"/>
                     </connections>
@@ -104,7 +104,7 @@
                                 <rect key="frame" x="0.0" y="118" width="414" height="714"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="workout_day_cell" id="rNB-q8-GUz" customClass="WorkoutDayTableViewCell" customModule="Workout_Log" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="workoutDay" id="rNB-q8-GUz" customClass="WorkoutDayTableViewCell" customModule="Workout_Log" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rNB-q8-GUz" id="Q77-6F-seJ">

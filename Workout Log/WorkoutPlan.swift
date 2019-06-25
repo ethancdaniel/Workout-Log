@@ -10,9 +10,10 @@ import Foundation
 
 class WorkoutPlan {
     let name: String
-    let workoutDays: [WorkoutDay?]
+    let workoutDays: [WorkoutDay]
     
     init(name: String) {
         self.name = name
+        self.workoutDays = []
     }
 }

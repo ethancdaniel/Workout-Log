@@ -12,6 +12,8 @@ class WorkoutPlanViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var workoutPlanTableView: UITableView!
     @IBOutlet weak var workoutNameLabel: UILabel!
     
+    var selectedWorkout: WorkoutPlan?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,11 +26,19 @@ class WorkoutPlanViewController: UIViewController, UITableViewDelegate, UITableV
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        if let workout = selectedWorkout {
+            return workout.workoutDays.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        if let workout = selectedWorkout {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "workoutDay", for: indexPath) as! WorkoutDayTableViewCell
+            cell.nameLabel.text = workout.workoutDays[indexPath.row].workoutName
+            return cell
+        }
+        return UITableViewCell()
     }
 }
 

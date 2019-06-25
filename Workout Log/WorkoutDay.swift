@@ -16,5 +16,6 @@ class WorkoutDay {
     init(name: String, day: String) {
         self.workoutName = name
         self.dayName = day
+        self.exercises = []
     }
 }
